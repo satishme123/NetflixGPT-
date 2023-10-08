@@ -60,7 +60,7 @@ dispatch(changeLanguage(e.target.value))
         {user &&
          <div className="flex p-2 justify-between">
           {showGptSearch &&
-          <select className=" p-2 m-2 mt-6 bg-gray-900 text-white rounded-lg" onChange={handleLanguageChange}>
+          <select className=" p-2 m-2 mt-4 bg-gray-900 text-white rounded-lg" onChange={handleLanguageChange}>
   {SUPPORTED_LANGUAGES.map((lang) => (
     <option key={lang.identifier} value={lang.identifier} >
       {lang.name}
@@ -68,9 +68,9 @@ dispatch(changeLanguage(e.target.value))
   ))}
 </select> }
         
-         <button className="py-2 px-2 mx-4 mt-4 bg-purple-800 text-white rounded-xl" onClick={(e)=>handleGptSearchClick(e)}>GPT Search</button>
+         <button className="p-0 px-2 mx-4 mt-4 bg-purple-800 text-sm h-10 text-white rounded-lg" onClick={(e)=>handleGptSearchClick(e)}>GPT Search</button>
          <img
-         className=" hidden md:block h-12 mt-4 mr-2 ml-4 mr-6"
+         className=" hidden md:block h-10 mt-4 rounded-3xl mr-2 ml-4 mr-6"
 src={user?.photoURL}          
 alt="userIcon"
        />
@@ -78,7 +78,7 @@ alt="userIcon"
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-6 w-6 h-6 ">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
 </svg>
-<span>(Sign Out)</span> 
+<span className="text-sm">(Sign Out)</span> 
       </button>
       </div>
       }

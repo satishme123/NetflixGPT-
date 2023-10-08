@@ -86,9 +86,9 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-full  md:w-3/12 absolute p-12 bg-black  my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg"
+        className="w-full  md:w-3/12 absolute p-12 bg-black  my-40 md:my-20 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg"
       >
-        <h1 className="font-bold text-3xl py-4">
+        <h1 className="font-bold text-2xl py-2">
           {signUpForm ? "Sign Up" : "Sign In"}
         </h1>
         {signUpForm && (
@@ -96,24 +96,24 @@ const Login = () => {
             type="text"
             ref={name}
             placeholder="Full Name"
-            className="p-3 my-4 w-full bg-gray-600"
+            className="p-3 my-4 w-full bg-gray-600 rounded-lg"
           />
         )}
         <input
           type="text"
           ref={email}
           placeholder="email"
-          className="p-3 my-4 w-full bg-gray-600"
+          className="p-3 my-4 w-full bg-gray-600 rounded-lg"
         />
         <input
           type="password"
           ref={password}
           placeholder="password"
-          className="p-3 my-4 w-full bg-gray-600"
+          className="p-3 my-4 w-full bg-gray-600 rounded-lg"
         />
         <p className="text-red-500">{errorMessage}</p>
         <button
-          className="p-3 my-4 bg-red-700 w-full"
+          className="p-3 my-4 bg-red-700 w-full rounded-lg"
           onClick={handleButtonClick}
         >
           {" "}
